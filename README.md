@@ -19,6 +19,7 @@ Download or clone the project to your local machine:
 git clone https://github.com/sarohask/object-detection-mobilenetssd.git
 cd object-detection-mobilenetssd
 docker-compose up --build
+```
 
 ### 2. Upload Image
 The above command will create a UI localhost webpage for uploading an image. You can select the image and upload it.
