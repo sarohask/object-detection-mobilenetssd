@@ -1,0 +1,19 @@
+version: '3'
+services:
+  ai-backend:
+    build: ./ai-backend
+    container_name: ai-backend
+    ports:
+      - "5002:5001"
+    volumes:
+      - ./output:/app/output  # Map the output folder to the container
+
+  ui-backend:
+    build: ./ui-backend
+    container_name: ui-backend
+    ports:
+      - "5003:5000"
+    depends_on:
+      - ai-backend
+    volumes:
+      - ./output:/app/output  # Map the same output folder to the container
